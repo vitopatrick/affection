@@ -1,113 +1,196 @@
-import Image from "next/image";
+import { Filter, QrCode, ThumbsUp, Users } from "lucide-react";
+import Link from "next/link";
+
+const superpowers = [
+  {
+    id: 1,
+    logo: <ThumbsUp size={100} strokeWidth={0.8} color="#991b1b" />,
+    title: "Simple to use",
+    about: "Simple steps to follow to have an affection arcade connection",
+  },
+
+  {
+    id: 2,
+    logo: <QrCode size={100} strokeWidth={2} color="#991b1b" />,
+    title: "Smart Matching",
+    about: "Create Connection with users that are like you",
+  },
+  {
+    id: 3,
+    logo: <Filter size={100} strokeWidth={1} color="#991b1b" />,
+    title: "Filter Very Fast",
+    about: "Don't Waste your time!,Find only what you are interested in",
+  },
+  {
+    id: 4,
+    logo: <Users size={100} strokeWidth={1.5} color="#991b1b" />,
+    title: "Cool Community",
+    about: "Affection Arcade is filled with cool members",
+  },
+];
+
+const extra = [
+  {
+    icon: "https://www.givitation.com/img/icon-trophy-1.85e5cf1f.svg",
+    title: "Best Site for Luxury Connecting",
+  },
+  {
+    icon: "https://www.givitation.com/img/icon-hearts-1.8c877e60.svg",
+    title: "Desires That Fit Your Lifestyle",
+  },
+  {
+    icon: "https://www.givitation.com/img/icon-globe-1.68b90b88.svg",
+    title: "15 plus years in over 60 countries",
+  },
+  {
+    icon: "https://www.givitation.com/img/icon-lock-1.e84f7ef0.svg",
+    title: "Secure & Private",
+  },
+];
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div>
+      {/* Banner */}
+      <div
+        style={{
+          background: "url('https://www.givitation.com/img/hero.74fe057f.png')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+        className="h-[80vh]"
+      >
+        <div className="flex flex-col items-center justify-center bg-black/50 h-full">
+          <div className="text-center space-y-4">
+            <h4 className="text-3xl lg:text-5xl lg:w-3/4 mx-auto">
+              Find a Sugar Baby or Sugar Daddy/Mama in Your Area Today!
+            </h4>
+            <p>
+              Are you an Elegant man/woman seeking a reliable connections that
+              is mutually beneficial?
+            </p>
+            <Link
+              href="/request"
+              className="inline-block bg-red-500 text-white p-4 rounded-md w-fit mt-5"
+            >
+              Join Anonymously & Discretely
+            </Link>
+          </div>
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      {/* connect */}
+      <div className="w-11/12 p-4 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div>
+          <img
+            src="https://affcontent.wpenginepowered.com/wp-content/uploads/2021/04/iStock-1196990731.jpg"
+            alt="the name is "
+          />
+        </div>
+        <div className="text-center space-y-3">
+          <h4 className="text-2xl text-red-600">Start Connecting</h4>
+          <p>
+            Affection Arcade is the luxury Connecting site for successful
+            mommies and daddy who just want to have fun discreetly.
+          </p>
+          <p>
+            “Elevating your experience” is the foundation of Affection Arcade,
+            where you will discover the connections, passions, and expectations
+            you desire…every step of the way.
+          </p>
+          <p>
+            Affection Arcade helps members choose connections that uniquely
+            align with their personal passions and dreams. With such a diverse
+            range of people and passions, we provide a safe environment to
+            explore, discover, and evolve what desire truly means to you.
+          </p>
+          <div className="grid grid-cols-4 gap-3 ">
+            {extra.map((e) => (
+              <div key={e.title} className="space-y-2">
+                <div>
+                  <img src={e.icon} alt={e.title} className="w-[70%] mx-auto" />
+                </div>
+                <h4 className="text-sm lg:text-base">{e.title}</h4>
+              </div>
+            ))}
+          </div>
+          <Link
+            href="/request"
+            className="inline-block bg-red-500 text-white p-4 rounded-md w-fit mt-5 text-center"
+          >
+            Send A Request
+          </Link>
+        </div>
+      </div>
+      {/* Powers */}
+      <div className="my-8">
+        <div className="text-center space-y-3 text-center">
+          <h4 className="text-2xl lg:text-3xl text-red-600">
+            Affection Arcade super powers
+          </h4>
+          <p>
+            Affection Arcade is like a breath of fresh Air. Secure and Discreet
+            with ready to use features we are sure you will love.
+          </p>
+        </div>
+        <div className="w-[90%] mx-auto p-3 grid grid-cols-1 lg:grid-cols-4 gap-4 mt-5">
+          {superpowers.map((power) => (
+            <SuperCardPowers
+              key={power.id}
+              title={power.title}
+              about={power.about}
+              logo={power.logo}
+            />
+          ))}
+        </div>
+      </div>
+      {/* how it works */}
+      <div className="w-[90%] mx-auto space-y-4">
+        <h4 className="text-center text-2xl lg:text-3xl">How Does It Work</h4>
+        <HowItWorksCard
+          imgUrl="https://www.givitation.com/img/home-dating-search.af8a3dd9.png"
+          title="Search"
+          about="The simple steps to follow to have a great experience using Affection Arcade. All you have to do is follow your gut and your heart!"
+        />
+        <HowItWorksCard
+          imgUrl="https://www.givitation.com/img/home-dating-match.ec5a2584.png"
+          title="Match"
+          about="Ready to use and easy to setup matching system. You get to choose users profile fields and percentage that impact the matching result!"
+          order={2}
+        />
+        <HowItWorksCard
+          imgUrl="https://www.givitation.com/img/home-dating-find-out.f039ac3f.png"
+          title="Find Out"
+          about="Users get to create a beautiful connection, get matched to your desired Sugar lover instantly."
         />
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }
+
+// How it works card
+const HowItWorksCard = ({ imgUrl, title, about, order }: any) => {
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className={order == 2 ? "order-last" : ""}>
+        <img src={imgUrl} alt={title} />
+      </div>
+      <div className=" lg:flex flex-col justify-center">
+        <h4 className="text-xl lg:text-2xl text-red-600">{title}</h4>
+        <p>{about}</p>
+      </div>
+    </div>
+  );
+};
+
+// super power card
+const SuperCardPowers = ({ logo, title, about }: any) => {
+  return (
+    <div className="flex items-center justify-center flex-col border rounded-lg border-neutral-700 shadow-sm p-4">
+      <div>{logo}</div>
+      <div className="text-center space-y-2 mt-3">
+        <h4 className="text-2xl ">{title}</h4>
+        <p>{about}</p>
+      </div>
+    </div>
+  );
+};
