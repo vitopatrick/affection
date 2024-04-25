@@ -52,7 +52,7 @@ Experience why Affection Arcade is the best site for Attractive and Elegant peop
       />
       {/* Getting Started */}
       <div className="w-11/12 mx-auto p-4  text-center space-y-6">
-        <h4 className=" text-center lg:text-3xl text-2xl text-red-600">
+        <h4 className=" text-center lg:text-3xl text-2xl text-blue-600">
           Getting Started on Affection Arcade
         </h4>
         <p>
@@ -70,7 +70,7 @@ Experience why Affection Arcade is the best site for Attractive and Elegant peop
         </p>
         <Link
           href="/request"
-          className="inline-block bg-red-500 text-white p-4 rounded-md w-fit"
+          className="inline-block bg-blue-500 text-white p-4 rounded-md w-fit"
         >
           Send A Request
         </Link>
@@ -92,14 +92,14 @@ const HeroCard = ({ imgUrl, title, p1, p2, p3, p4 }: any) => {
     <div className="grid grid-col-1 lg:grid-cols-2 place-items-start-center my-16">
       <img src={imgUrl} alt="oicture" />
       <div className="text-center space-y-4 p-4">
-        <h4 className="text-2xl lg:text-3xl text-red-600">{title}</h4>
+        <h4 className="text-2xl lg:text-3xl text-blue-600">{title}</h4>
         <p>{p1}</p>
         <p>{p2}</p>
         <p>{p3}</p>
         <p>{p4}</p>
         <Link
           href="/request"
-          className="inline-block bg-red-500 text-white p-4 rounded-md w-fit"
+          className="inline-block bg-blue-500 text-white p-4 rounded-md w-fit"
         >
           Send A Request
         </Link>
@@ -111,7 +111,7 @@ const HeroCard = ({ imgUrl, title, p1, p2, p3, p4 }: any) => {
 const Community = ({ title, about }: any) => {
   return (
     <div className="text-center space-y-2">
-      <h4 className="text-2xl text-red-600">{title}</h4>
+      <h4 className="text-2xl text-blue-600">{title}</h4>
       <p>{about}</p>
     </div>
   );

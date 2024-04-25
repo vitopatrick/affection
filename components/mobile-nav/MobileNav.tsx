@@ -18,7 +18,7 @@ export default function MobileNav() {
             <Link
               href={link.url}
               key={link.title}
-              className="text-neutral-200 hover:text-red-700 transition-all ease-in-out block uppercase my-4 "
+              className="text-neutral-200 hover:text-blue-700 transition-all ease-in-out block uppercase my-4 "
             >
               {link.title}
             </Link>

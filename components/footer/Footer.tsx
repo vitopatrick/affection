@@ -1,5 +1,5 @@
 import { links } from "@/lib/links";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin, Phone, Send } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
@@ -11,10 +11,18 @@ export default function Footer() {
         <div className="space-y-4 lg:col-span-2">
           <h4 className="text-xl font-medium">About Us</h4>
           <p>
-            Affection Arcade is the largest luxury and secured connection site
+            Affection Arcade is the largest luxury and secublue connection site
             for the beautiful,wealthy and successful,with 15 plus years in over
             60 countries{" "}
           </p>
+          <div className="flex gap-3">
+            <a href="https://www.facebook.com/share/vg4q8DGHeFqUUhZ7/?mibextid=LQQJ4d">
+              <Facebook />
+            </a>
+            <a href="https://www.instagram.com/official_affectionarcade?igsh=a2FpbjhvaGo3dHRh&utm_source=qr">
+              <Instagram />
+            </a>
+          </div>
           <p>
             MEMBERS OF AFFECTION ARCADE ARE NOT SUBJECT TO MANDATORY BACKGROUND
             SCREENINGS BUT HAVE THE OPTION TO SUBMIT FOR A BACKGROUND CHECK
@@ -29,7 +37,7 @@ export default function Footer() {
               <Link
                 href={link.url}
                 key={link.title}
-                className="inline-block hover:text-red-700 transition-all ease-in-out"
+                className="inline-block hover:text-blue-700 transition-all ease-in-out"
               >
                 {link.title}
               </Link>
@@ -55,6 +63,17 @@ export default function Footer() {
               <Phone />
               <p> +61 4888 72153</p>
             </div>
+            {/* Telegram */}
+            <div className="flex items-center gap-2">
+              <Send />
+              <a
+                href="https://t.me/Official_AffectionArcade"
+                className="line-clamp-1"
+              >
+                {" "}
+                https://t.me/Official_AffectionArcade
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -62,6 +81,21 @@ export default function Footer() {
         <p className="text-sm p-3">
           2023 Affection Arcade | All right Reserved
         </p>
+        <div className="space-x-4 text-neutral-600  pl-3 lg:pl-0">
+          <Link
+            href="/disclaimer"
+            className="hover:text-neutral-300 transition-all ease-in"
+          >
+            Disclaimer
+          </Link>
+
+          <Link
+            href="/privacy"
+            className="hover:text-neutral-300 transition-all ease-in"
+          >
+            Privacy Policy
+          </Link>
+        </div>
       </div>
     </footer>
   );

@@ -7,19 +7,15 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Textarea } from "../ui/textarea";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   full_name: z.string().min(2, { message: "Enter full name" }).max(50),
@@ -28,10 +24,7 @@ const formSchema = z.object({
     .min(2, { message: "Enter Email" })
     .max(50)
     .email({ message: "Enter Valid Email" }),
-  gender: z.string().min(2, { message: "Select Gender" }).max(50),
-  age: z.string().min(2, { message: "Select Age" }).max(50),
-  state: z.string().min(2, { message: "Select Age" }).max(50),
-  country: z.string().min(2, { message: "Select Age" }).max(50),
+  about: z.string().min(2, { message: "Enter full name" }).max(50),
 });
 
 export default function RequestForm() {
@@ -44,10 +37,20 @@ export default function RequestForm() {
   });
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    // call the api
+    try {
+      await fetch("/api/", {
+        method: "POST",
+        body: JSON.stringify({
+          ...values,
+        }),
+      });
+
+      return toast.success("request sent");
+    } catch (error: any) {
+      return toast.error("Request Error");
+    }
   }
 
   return (
@@ -91,95 +94,31 @@ export default function RequestForm() {
                   </FormItem>
                 )}
               />
-              {/* Gender */}
+              {/* email */}
+              <FormField
+                control={form.control}
+                name="about"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Message</FormLabel>
+                    <FormControl>
+                      <Textarea
+                        className="border border-neutral-400 bg-transparent text-white p-5 focus:outline-none"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormDescription>
+                      Please Describe to use what you'd want in a spouse or
+                      partner
+                    </FormDescription>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
-              <FormField
-                control={form.control}
-                name="gender"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Select Gender</FormLabel>
-                    <FormControl>
-                      <Select {...field}>
-                        <SelectTrigger className="w-full bg-transparent">
-                          <SelectValue />
-                        </SelectTrigger>
-                        <SelectContent className="bg-neutral-800 text-white border-none">
-                          <SelectItem value="male" className="hover:bg-black">
-                            Male
-                          </SelectItem>
-                          <SelectItem value="Female">Female</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              {/* Age */}
-              <FormField
-                control={form.control}
-                name="gender"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Select Age</FormLabel>
-                    <FormControl>
-                      <Select>
-                        <SelectTrigger className="w-full bg-transparent">
-                          <SelectValue />
-                        </SelectTrigger>
-                        <SelectContent className="bg-neutral-800 text-white border-none">
-                          <SelectItem value="18-25" className="hover:bg-black">
-                            18-25
-                          </SelectItem>
-                          <SelectItem value="26-45">26-45</SelectItem>
-                          <SelectItem value="46-65">46-65</SelectItem>
-                          <SelectItem value="66-85">66-85</SelectItem>
-                          <SelectItem value="86-100">86-100</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              {/* Country */}
-              <FormField
-                control={form.control}
-                name="country"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Country</FormLabel>
-                    <FormControl>
-                      <Input
-                        className="border border-neutral-400 bg-transparent text-white p-5 focus:outline-none"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              {/* state */}
-              <FormField
-                control={form.control}
-                name="state"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>State/Province</FormLabel>
-                    <FormControl>
-                      <Input
-                        className="border border-neutral-400 bg-transparent text-white p-5 focus:outline-none"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
               <Button
                 type="submit"
-                className="capitalize bg-red-800 block w-full hover:bg-red-500"
+                className="capitalize bg-blue-800 block w-full hover:bg-blue-500"
               >
                 Send A request
               </Button>

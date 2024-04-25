@@ -13,13 +13,13 @@ export const testimonies = [
   },
   {
     testimony:
-      "“At the age of 55, I held the misconception that sugar mommies were only sought after by younger individuals. To my pleasant surprise, I discovered that I was mistaken! I am now relishing in the delightful gifts bestowed upon me by my very own sugar mommy. Age has proven to be no barrier when it comes to the enjoyment I am experiencing. .”",
+      "“At the age of 55, I held the misconception that sugar mommies were only sought after by younger individuals. To my pleasant surprise, I discoveblue that I was mistaken! I am now relishing in the delightful gifts bestowed upon me by my very own sugar mommy. Age has proven to be no barrier when it comes to the enjoyment I am experiencing. .”",
     name: "Amitabh",
     location: "Australia",
   },
   {
     testimony:
-      "“After experiencing the unfortunate combination of losing my job shortly after my divorce, I found myself in a difficult situation with no financial stability. It was during this challenging time that a friend of mine recommended a particular website to me. Since then, my life has taken a positive turn, as I now have the opportunity to connect with several sugar mommy who support me financially. Through these connections, I've been able to earn over $15,000 per week and receive incredible gifts from several amazing mommies.”",
+      "“After experiencing the unfortunate combination of losing my job shortly after my divorce, I found myself in a difficult situation with no financial stability. It was during this challenging time that a friend of mine recommended a particular website to me. Since then, my life has taken a positive turn, as I now have the opportunity to connect with several sugar mommy who support me financially. Through these connections, I've been able to earn over $15,000 per week and receive incblueible gifts from several amazing mommies.”",
     name: "Avilit",
     location: "Miami, FLore",
   },

@@ -13,7 +13,7 @@ export default function ContactUs() {
       />
       <div className="w-11/12 mx-auto bg-stone-700 p-3 grid grid-cols-1 lg:grid-cols-2 gap-4 rounded-lg my-8">
         <div className="flex flex-col justify-between px-4 py-4">
-          <h4 className="text-xl text-red-600">
+          <h4 className="text-xl text-blue-600">
             CONTACT <br /> US
           </h4>
           {/* email */}
@@ -46,7 +46,7 @@ export default function ContactUs() {
           />
           <Button
             variant={"default"}
-            className="uppercase text-red-600 bg-transparent hover:bg-transparent"
+            className="uppercase text-blue-600 bg-transparent hover:bg-transparent"
           >
             Send
           </Button>

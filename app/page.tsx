@@ -4,26 +4,26 @@ import Link from "next/link";
 const superpowers = [
   {
     id: 1,
-    logo: <ThumbsUp size={100} strokeWidth={0.8} color="#991b1b" />,
+    logo: <ThumbsUp size={100} strokeWidth={0.8} color="#2563eb" />,
     title: "Simple to use",
     about: "Simple steps to follow to have an affection arcade connection",
   },
 
   {
     id: 2,
-    logo: <QrCode size={100} strokeWidth={2} color="#991b1b" />,
+    logo: <QrCode size={100} strokeWidth={2} color="#2563eb" />,
     title: "Smart Matching",
     about: "Create Connection with users that are like you",
   },
   {
     id: 3,
-    logo: <Filter size={100} strokeWidth={1} color="#991b1b" />,
+    logo: <Filter size={100} strokeWidth={1} color="#2563eb" />,
     title: "Filter Very Fast",
     about: "Don't Waste your time!,Find only what you are interested in",
   },
   {
     id: 4,
-    logo: <Users size={100} strokeWidth={1.5} color="#991b1b" />,
+    logo: <Users size={100} strokeWidth={1.5} color="#2563eb" />,
     title: "Cool Community",
     about: "Affection Arcade is filled with cool members",
   },
@@ -71,7 +71,7 @@ export default function Home() {
             </p>
             <Link
               href="/request"
-              className="inline-block bg-red-500 text-white p-4 rounded-md w-fit mt-5"
+              className="inline-block bg-blue-500 text-white p-4 rounded-md w-fit mt-5"
             >
               Join Anonymously & Discretely
             </Link>
@@ -82,12 +82,12 @@ export default function Home() {
       <div className="w-11/12 p-4 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
           <img
-            src="https://affcontent.wpenginepowered.com/wp-content/uploads/2021/04/iStock-1196990731.jpg"
-            alt="the name is "
+            src="https://www.givitation.com/img/yellow-dress.b60d9b8b.png"
+            alt="image"
           />
         </div>
         <div className="text-center space-y-3">
-          <h4 className="text-2xl text-red-600">Start Connecting</h4>
+          <h4 className="text-2xl text-blue-600">Start Connecting</h4>
           <p>
             Affection Arcade is the luxury Connecting site for successful
             mommies and daddy who just want to have fun discreetly.
@@ -115,7 +115,7 @@ export default function Home() {
           </div>
           <Link
             href="/request"
-            className="inline-block bg-red-500 text-white p-4 rounded-md w-fit mt-5 text-center"
+            className="inline-block bg-blue-500 text-white p-4 rounded-md w-fit mt-5 text-center"
           >
             Send A Request
           </Link>
@@ -124,7 +124,7 @@ export default function Home() {
       {/* Powers */}
       <div className="my-8">
         <div className="text-center space-y-3 text-center">
-          <h4 className="text-2xl lg:text-3xl text-red-600">
+          <h4 className="text-2xl lg:text-3xl text-blue-600">
             Affection Arcade super powers
           </h4>
           <p>
@@ -160,7 +160,7 @@ export default function Home() {
         <HowItWorksCard
           imgUrl="https://www.givitation.com/img/home-dating-find-out.f039ac3f.png"
           title="Find Out"
-          about="Users get to create a beautiful connection, get matched to your desired Sugar lover instantly."
+          about="Users get to create a beautiful connection, get matched to your desiblue Sugar lover instantly."
         />
       </div>
     </div>
@@ -171,11 +171,11 @@ export default function Home() {
 const HowItWorksCard = ({ imgUrl, title, about, order }: any) => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-      <div className={order == 2 ? "order-last" : ""}>
+      <div className={order == 2 ? "lg:order-last" : ""}>
         <img src={imgUrl} alt={title} />
       </div>
       <div className=" lg:flex flex-col justify-center">
-        <h4 className="text-xl lg:text-2xl text-red-600">{title}</h4>
+        <h4 className="text-xl lg:text-2xl text-blue-600">{title}</h4>
         <p>{about}</p>
       </div>
     </div>
