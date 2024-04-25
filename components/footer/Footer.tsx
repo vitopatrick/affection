@@ -28,6 +28,22 @@ export default function Footer() {
             SCREENINGS BUT HAVE THE OPTION TO SUBMIT FOR A BACKGROUND CHECK
             AND/OR ID VERIFICATION.
           </p>
+          {/* advertise */}
+          <div>
+            <div className="w-[15%]">
+              <img
+                src="https://www.eurogirlsescort.com/dist/images/logo.svg"
+                alt="image"
+              />
+            </div>
+            <div>
+              {/* <p className="uppercase text-bold">Hello</p>
+              <p>
+                To Approve your account,we require you to place our banner on
+                your home page
+              </p> */}
+            </div>
+          </div>
         </div>
         {/* links */}
         <div className="space-y-3">

@@ -1,5 +1,9 @@
+"use client";
+
 import { Filter, QrCode, ThumbsUp, Users } from "lucide-react";
 import Link from "next/link";
+// import { useMemo, useState } from "react";
+// import { motion, AnimatePresence } from "framer-motion";
 
 const superpowers = [
   {
@@ -48,17 +52,35 @@ const extra = [
   },
 ];
 
+const images = ["/bg-1.png", "/bg-2.jpeg", "/bg-3.webp", "/bg-1.png"];
+
 export default function Home() {
+  // const [imageNum, setImageNum] = useState(0);
+
+  // useMemo(() => {
+  //   const interval = setInterval(() => {
+  //     if (imageNum == images.length) {
+  //       setImageNum(0);
+  //     } else {
+  //       setImageNum((prev) => prev + 1);
+  //     }
+  //   }, 5000);
+
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, [imageNum]);
+
   return (
-    <div>
+    <div className="w-screen">
       {/* Banner */}
       <div
         style={{
-          background: "url('https://www.givitation.com/img/hero.74fe057f.png')",
-          backgroundRepeat: "no-repeat",
+          backgroundImage: `url('/bg-1.png')`,
           backgroundSize: "cover",
+          backgroundPosition: "center center",
         }}
-        className="h-[80vh]"
+        className="h-[50vh] w-screen"
       >
         <div className="flex flex-col items-center justify-center bg-black/50 h-full">
           <div className="text-center space-y-4">

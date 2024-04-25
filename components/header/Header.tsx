@@ -6,13 +6,6 @@ import MobileNav from "../mobile-nav/MobileNav";
 export default function Header() {
   return (
     <header>
-      <div className="bg-blue-800/50 p-4 flex flex-col items-center justify-center">
-        <p className="uppercase text-bold">Hello</p>
-        <p>
-          To Approve your account,we require you to place our banner on your
-          home page
-        </p>
-      </div>
       {/* container */}
       <div className="w-11/12 mx-auto py-8 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2">
