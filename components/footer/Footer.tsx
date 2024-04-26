@@ -29,19 +29,6 @@ export default function Footer() {
             AND/OR ID VERIFICATION.
           </p>
           {/* advertise */}
-          <div>
-            <a
-              href="https://www.eurogirlsescort.com"
-              target="_blank"
-              title="EuroGirlsEscortcom"
-            >
-              <img
-                src="https://www.eurogirlsescort.com/dist/images/banners/120X60.jpg"
-                alt="EuroGirlsEscort.com"
-                title="EuroGirlsEscort.com"
-              />
-            </a>
-          </div>
         </div>
         {/* links */}
         <div className="space-y-3">
