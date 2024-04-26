@@ -30,19 +30,17 @@ export default function Footer() {
           </p>
           {/* advertise */}
           <div>
-            <div className="w-[15%]">
+            <a
+              href="https://www.eurogirlsescort.com"
+              target="_blank"
+              title="EuroGirlsEscortcom"
+            >
               <img
-                src="https://www.eurogirlsescort.com/dist/images/logo.svg"
-                alt="image"
+                src="https://www.eurogirlsescort.com/dist/images/banners/120X60.jpg"
+                alt="EuroGirlsEscort.com"
+                title="EuroGirlsEscort.com"
               />
-            </div>
-            <div>
-              {/* <p className="uppercase text-bold">Hello</p>
-              <p>
-                To Approve your account,we require you to place our banner on
-                your home page
-              </p> */}
-            </div>
+            </a>
           </div>
         </div>
         {/* links */}
